@@ -1,21 +1,19 @@
 FROM centos:7
 
-ENV SUMMARY="Base image which allows using of source-to-image."	\
-    DESCRIPTION="The s2i-core image provides any images layered on top of it \
-with all the tools needed to use source-to-image functionality while keeping \
-the image size as small as possible."
+ENV SUMMARY="Drupal 8.6.1 Base Image"	\
+    DESCRIPTION="All in one image of Drupal 8.6.1 with PHP 7.2 and MariadDB 10.3 on Centos 7.5."
 
 LABEL summary="$SUMMARY" \
       description="$DESCRIPTION" \
       io.k8s.description="$DESCRIPTION" \
-      io.k8s.display-name="s2i core" \
+      io.k8s.display-name="Drupal 861" \
       io.openshift.s2i.scripts-url=image:///usr/libexec/s2i \
       io.s2i.scripts-url=image:///usr/libexec/s2i \
-      com.redhat.component="s2i-core-container" \
-      name="centos/s2i-core-centos7" \
+      com.redhat.component="drupal-861-centos-75" \
+      name="centos/drupal-861" \
       version="1" \
       release="1" \
-      maintainer="SoftwareCollections.org <sclorg@redhat.com>"
+      maintainer="<regis.mazur@royalmail.com>"
 
 ENV \
     # DEPRECATED: Use above LABEL instead, because this will be removed in future versions.
