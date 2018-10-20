@@ -1,9 +1,9 @@
-To build:
-docker build -t s2i-centos7-regis:0.1 .
+To build:  
+docker build -t drupal861:0.1 .
 
-To run:
-docker run -d --name s2i-regis -v /${PWD}:/wkDir:ro -p 80:80 s2i-centos7-regis:0.1
-#docker exec -it s2i-regis bash
+To run:  
+docker run -d --name drupal8 -v /${PWD}:/wkDir:ro -p 80:80 drupal861:0.1
+#docker exec -it drupal8 bash
 
 #docker rmi $(docker images -f "dangling=true" -q)
 
