@@ -7,9 +7,9 @@ docker run -d --name drupal8 -v /${PWD}:/wkDir:ro -p 80:80 drupal861:0.1
 
 #docker rmi $(docker images -f "dangling=true" -q)
 
-URLs:
+URLs:  
 localhost/phpinfo.php
 localhost/drupal
 
-MariaDB/mySQL DB:
+MariaDB/mySQL DB:  
 DBName=drupal, user=regis, pwd=mypassword
