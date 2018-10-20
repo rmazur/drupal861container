@@ -1,0 +1,8 @@
+#!/bin/bash
+/usr/bin/mysqld_safe &
+sleep 10
+mysql -u root -e "CREATE DATABASE drupal"
+mysql -u root -e "create user regis@localhost identified by 'mypassword'"
+mysql -u root -e "grant all on drupal.* to regis@localhost"
+mysql -u root -e "flush privileges"
+exec "$@"
